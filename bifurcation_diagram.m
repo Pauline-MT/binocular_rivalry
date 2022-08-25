@@ -22,6 +22,8 @@ L = 1;
 a = 3.4;
 eps = 0;
 
+%% Time evolution of the neuronal activities
+
 a  = sim('simulation');
 x=a.get('x');
 data = x.Data;
@@ -107,7 +109,6 @@ xlabel('Bifurcation parameter a')
 %     E_R = E_R(E_R >0.1)
 %     mean = length(E_R)*Ts;
 %     Rpduration(i) = mean;
-%    
 %     
 % end
 % 
@@ -115,6 +116,7 @@ xlabel('Bifurcation parameter a')
 % plot(list_R, Lpduration)
 % hold on 
 % plot(list_R, Rpduration)
+    
 
 %% Steady state perception with Simulink
 
@@ -147,8 +149,9 @@ ylabel('Perception duration (s)')
 legend show
 title('Steady-state duration of perception of the left and right stimuli')
 
-%Commentaire : We can see that the left stimuli decreases as the right stimulus intensity R increases.
+%We can see that the left stimuli decreases as the right stimulus intensity R increases.
 %This validates the Levelt's second law.
+    
 
 %% Alternation period
 
